@@ -1,0 +1,21 @@
+*{margin:5px;}
+input,textarea { width:95%; }
+input[type=submit] { width:100px; }
+#boardTable{
+    border: 1px solid gray; border-collapse: collapse; width: 600px; 
+}
+#boardTable tr{
+    text-align: center;
+}
+#boardTable th, td{
+    border: 1px solid gray;
+}
+#boardTable td{
+  text-align: left;
+}    
+#boardTable td.cen{
+  text-align: center;
+}    
+#boardTable td.subject{
+    text-align: left;
+}

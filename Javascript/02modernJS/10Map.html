@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Map</title>
+</head>
+<body>
+	<h2>Map</h2>
+	<script>
+		(() => {
+			console.error('기본사용법');
+			const person = new Map();
+			person.set('name', '성유겸');
+			person.set('age', 14);	
+			person.set('hobby', '축구');	
+						
+			console.log('크기:', person.size);
+			console.log('get()-개별인출:', person.get('name'));
+			console.log('has()-존재확인:', person.has('age'));
+			console.log('delete()-삭제:', person.delete('hobby'));
+			
+			for (const [key, value] of person) {
+				console.log(`${key} => ${value}`);
+			}
+		})();
+
+		(() => {
+			console.error('다양한 Key 사용');
+			const objKey = { idx: 1 }; //객체형 Key
+			const funcKey = () => {}; //함수형 Key
+			const strKey = '문자형'; //문자형 Key 
+			const numberKey = 10; //숫자형 Key 
+			
+			const friends = new Map();
+			friends.set(objKey, '차범근');
+			friends.set(funcKey, '박지성');
+			friends.set(strKey, '안정환');
+			friends.set(numberKey, '손홍민');
+
+			friends.forEach((value, key) => {
+				console.log('key:', key, 'value:', value);
+				//console.log(`${key} : ${value}`);
+			});			
+		})();
+	</script>
+</body>
+</html>

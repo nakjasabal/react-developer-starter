@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>map()</title>
+</head>
+<script>
+	function map01(){
+		console.error("기본사용법");
+		var myNumbers = [1,2,3,4,5];
+		var resultArr = myNumbers.map(function(currentValue, index, useArray){
+			console.log(currentValue, index, useArray);
+			return currentValue * 2;
+		});
+		console.log('결과', resultArr);
+	}
+
+	function map02(){
+		console.error("새로운 객체 배열 만들기");    
+		var objArr = [
+			{name : "전우치", salary : 1000},
+			{name : "홍길동", salary : 2000},
+			{name : "임신구", salary : 3000}
+		];
+		var resultArr = objArr.map(function(item){
+			var returnObj = {}
+			returnObj[item.name] = item.salary;
+			return returnObj;
+		});
+		console.log('결과', resultArr);
+	}
+
+	function map03(){
+		console.error("UI에 적용하기");
+		var objArr = [
+			{ name: "조조", nation: "위" },
+			{ name: "유비", nation: "촉" },
+			{ name: "손권", nation: "오" }
+		];
+		var viewHtml = objArr.map(function(item) {
+			return '<li>'+item.nation+' - '+item.name +'</li>';
+		});
+		//document.getElementById('display').innerHTML = viewHtml;
+		document.getElementById('display').innerHTML = viewHtml.join("");
+	}
+</script>
+<body>
+	<h2>고차함수 - map()</h2>
+	<div>
+		<input type="button" onclick="map01()" value="map1">
+		<input type="button" onclick="map02()" value="map2">
+		<input type="button" onclick="map03()" value="map3">
+	</div>
+	<ul id="display"></ul>
+</body>
+</html>

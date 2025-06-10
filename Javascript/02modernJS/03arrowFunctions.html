@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>화살표함수</title>
+</head>
+<body>
+	<h2>화살표 함수(Arrow Functions)</h2>
+	<script>
+		const sumLimit = (start, end) => {
+			let sum = 0;
+			for(var i=start ; i<=end ; i++){
+				sum += i;
+			}
+			return sum;
+		}
+		let func1 = () => {
+			let result = sumLimit(1, 100);
+			console.log("result="+ result);
+		}
+	
+		const helloStr = param => "Hello " + param;
+		let func2 = () => {
+			document.getElementById("display").innerHTML 
+				= helloStr("World!!!");
+		}
+	</script>
+	<div>
+		<button type="button" onclick="func1();">버튼1</button>
+		<button type="button" onclick="func2();">버튼2</button>
+	</div>
+	<p id="display"></p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프레드연산자</title>
+</head>
+<body>
+	<h2>스프레드 연산자(Spread operator)</h2>
+	<script>		
+	let arr1 = [1,2,3]; 
+	let arr2 = [4,5,6]; 
+
+	const func1 = () => {		
+		const new1 = arr1.concat(arr2);
+		console.log('결과1-1', new1);
+		const new2 = [...arr1, ...arr2]; 
+		console.log('결과1-2', new1);
+	}	
+
+	const func2 = () => {
+		let str1 = 'ES'; 
+		console.log('결과2-1', str1[0], str1[1]);
+		// str1.push('6');
+		let strArr = [...str1]; 
+		strArr.push('6');
+		console.log('결과2-2', strArr);
+	}
+
+	const func3 = () => {			
+		let result1 = Math.min(arr1[0],arr1[1],arr1[2]);
+		console.log('결과3-1', result1);
+		let result2 = Math.max(...arr2);
+		console.log('결과3-2', result2);
+	}
+
+	const func4 = () => {
+		let contacts = [
+			{name:'철수', age:10}, 
+			{name:'영희', age:11}, 
+			{name:'유겸', age:12}
+		];
+		let maxAge = Math.max(...contacts.map((item) => item.age));
+		console.log('결과4', maxAge);
+	}
+
+	const func5 = () => {
+		let boy = { name:'성유겸', job:'중학생'};
+		boy = {...boy, age:12}; 
+		console.log('결과5-1', boy);
+		boy = {...boy, name:'유비', age:50, job:'촉의황제'}; 
+		console.log('결과5-2', boy);
+	}
+	</script>
+	<div>
+		<button type="button" onclick="func1();">버튼1</button>
+		<button type="button" onclick="func2();">버튼2</button>
+		<button type="button" onclick="func3();">버튼3</button>
+		<button type="button" onclick="func4();">버튼4</button>
+		<button type="button" onclick="func5();">버튼5</button>
+	</div>
+</body>
+</html>
+ 

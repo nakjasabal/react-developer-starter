@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>filter()</title>
+</head>
+<script>
+	function filter01(){
+		console.error("기본사용법");    
+		var myNumbers = [1,2,3,4,5];
+		var resultArr = myNumbers.filter(function(currentValue, index, useArray){
+			console.log(currentValue, index, useArray);
+			return currentValue <= 3;
+		});
+		console.log('결과', resultArr);
+	}
+
+	function filter02(){
+		console.error("새로운 객체 배열 만들기");
+		var objArr = [
+			{name : "유비", salary : 1000},
+			{name : "관우", salary : 2000},
+			{name : "장비", salary : 3000},
+			{name : "손오공", salary : 4000},
+			{name : "저팔계", salary : 5000},
+			{name : "사오정", salary : 6000}
+		];     
+		var resultArr = objArr.filter(function(item) {
+			return item.salary>=3000;  
+		});
+		console.log('결과', resultArr);		
+	}
+</script>
+<body>
+	<h2>고차함수 - filter()</h2>
+	<div>
+		<input type="button" onclick="filter01();" value="filter1">
+		<input type="button" onclick="filter02();" value="filter2">
+	</div>    
+</body>
+</html>

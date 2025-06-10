@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  <h2>Promise</h2>
+  <script>
+    const myPromise1 = new Promise((resolve, reject) => {
+      const success = true; 
+      if (success) {
+        resolve('작업 성공');
+      } else {
+        reject('작업 실패');
+      }
+    });
+    const func1 = () => {
+      myPromise1
+        .then(result => {
+          console.log(result); 
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+
+    function myPromise2() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('3초 후 완료된 작업');
+        }, 3000);
+      });
+    }
+    const func2 = () => {
+      myPromise2().then(result => {
+        console.log(result); 
+      });
+    }
+  </script>
+  <div>
+    <button type="button" onclick="func1();">버튼1</button>
+    <button type="button" onclick="func2();">버튼2</button>
+  </div>
+</body>
+</html>
+
+
+

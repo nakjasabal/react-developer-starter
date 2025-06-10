@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조분해할당</title>
+</head>
+<body>
+  <h2>구조분해할당(Destructuring assignment)</h2>
+  <script>
+    let func1 = () => {
+      let nameArr = ["YuGyeom", "Sung"];    
+      let [firstName, lastName] = nameArr;
+      console.log('결과1', firstName, lastName); 
+    }
+    
+    let func2 = () => {
+      let [firstName, lastName] = "YuGyeom Sung".split(' ');
+      console.log('결과2', firstName, lastName);
+    }
+
+    let func3 = () => {
+      let [person1, ,person3] = ["유비", "관우", "장비", "조자룡"];
+      console.log('결과3', person1, person3);
+    }
+
+    let func4 = () => {
+      let [name1, name2, ...rest] = ["유비", "관우", "장비", "조자룡"];
+      console.log('결과4-1', name1, name2);
+      console.log('결과4-2', rest[0], rest[1], rest.length);
+    }
+  </script>
+  <button type="button" onclick="func1();">버튼1</button>
+  <button type="button" onclick="func2();">버튼2</button>
+  <button type="button" onclick="func3();">버튼3</button>
+  <button type="button" onclick="func4();">버튼4</button>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>some()</title>
+</head>
+<script>
+  function some01(){		
+    console.error("some() : 일부 요소라도 조건에 만족");
+    var myNumbers = [1, 2, 3, 4, 5];    
+    var result = myNumbers.some(function(num) {
+      console.log('현재값', num);
+      return num % 2 === 0;
+    });
+    console.log("결과", result ? '짝수포함됨' : '짝수없음');
+  }
+
+  function some02(){		
+    console.error("활성화 된 멤버만 추출하기");
+    const members = [
+      { idx: 1, name: "김철수", active: false },
+      { idx: 2, name: "박영희", active: true },
+      { idx: 3, name: "강민호", active: false }
+    ];
+    const isMember = members.some(function(member) {
+      return member.active;
+    });
+    if(isMember){
+      var result = members.filter(function(member){
+        return member.active === true;
+      });
+      console.log("결과", result);
+    }
+    else{
+      console.log("모든 멤버가 비활성화 되었습니다.");
+    }
+  }
+</script>
+<body>
+  <h2>고차함수 - some()</h2>
+  <div>
+    <input type="button" onclick="some01()" value="some01">
+    <input type="button" onclick="some02()" value="some02">
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01previousES6</title>
+</head>
+<body>
+	<h2>ES6 이전의 문제점</h2>
+	<script>
+		function myFunc(){
+			globalVar = 2;
+			var localVar = 1;
+		}
+		function func1(){
+			myFunc();
+			console.error('func1실행');
+			console.log('globalVar='+globalVar);
+			console.log('localVar='+localVar);
+		}
+		function func2(){
+			console.error('func2실행');
+			for(var i=1 ; i<=5 ; i++){
+				console.log("for루프안 i="+ i);  
+			}			
+			console.log("for루프밖 i="+ i); 
+		}
+		function func3(){			
+			console.error('func3실행');
+			console.log('x 선언전='+ x); 			
+			var x = 10;
+			console.log('x 선언후='+ x);
+		}
+		function func4(){
+			console.error('func4실행');
+			var y = 1; 
+			var y = 2; 
+			console.log('y 재정의='+ y);  
+		}
+	</script>
+	<div>
+		<button type="button" onclick="func1();">버튼1</button>
+		<button type="button" onclick="func2();">버튼2</button>
+		<button type="button" onclick="func3();">버튼3</button>
+		<button type="button" onclick="func4();">버튼4</button>
+	</div>
+</body>
+</html>

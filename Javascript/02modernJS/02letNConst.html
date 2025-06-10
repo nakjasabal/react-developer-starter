@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>let과const</title>
+</head>
+<body>
+	<h2>let 과 const</h2>	
+	<script>
+		const constNum = 100;
+		const sumLimit = function (start, end) {            
+			let sum = 0;
+			for(let i=start ; i<=end ; i++){
+				sum += i;
+			}
+			return sum;
+		}
+		const func1 = function(){
+			console.error('func1 실행');
+			//console.log('result 선언전='+ result); //호이스팅 안되므로 에러
+			let result = sumLimit(1, 10);
+			console.log('result 선언후='+ result);
+			console.log('상수 constNum='+ constNum);			
+			//constNum = 200; //상수는 변경불가
+		}
+		const func2 = function(){
+			console.error('func2 실행');
+			let j = 100;
+			for(let j=1 ; j<=5 ; j++){
+				console.log('for문안의 j='+ j); 
+			}
+			console.log('for문밖의 j='+ j);
+			//let j = 200; //재정의 에러
+		}
+		const func3 = function(){
+			console.error('func3 실행');
+			const obj = {name : '강백호', position : '포워드'};
+			obj.name = '송태섭';
+			obj.position= '가드';
+			console.log('변경후출력', obj);
+		}
+	</script>
+	<div>
+		<button type="button" onclick="func1();">버튼1</button>
+		<button type="button" onclick="func2();">버튼2</button>
+		<button type="button" onclick="func3();">버튼3</button>
+	</div>
+</body>
+</html>

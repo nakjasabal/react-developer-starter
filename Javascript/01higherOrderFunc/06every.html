@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>every()</title>
+</head>
+<script>
+  function every01(){		
+    console.error("every() : 모든 요소가 조건에 만족");
+    var myNumbers = [1, 2, 3, 4, 5];    
+    var result = myNumbers.every(function(num) {
+      console.log('현재값', num);
+      return num % 2 === 0;
+    });
+    console.log("결과", result ? '짝수만있음' : '홀수포함됨');
+  }
+  
+  function every02(){		
+    console.error("학점구하기");
+    var students = [
+      { idx: 1, name: "성유겸", score: 99 },
+      { idx: 2, name: "정유겸", score: 73 },
+      { idx: 3, name: "최유겸", score: 85 },
+      { idx: 4, name: "김유겸", score: 61 }
+    ];
+    const isValid = students.every(function(student) {
+      return student.score > 0;
+    });
+    if (isValid) {
+      const result = students.map(function(student) {
+        return {          
+          name: student.name,
+          score: student.score,
+          grade: getGrade(student.score)
+        };
+      });
+      console.log(result);
+    }
+    else{
+      console.log("0점이 있으므로 결과를 볼 수 없습니다.");
+    }
+  }
+  function getGrade(score) {
+    if (score >= 90) return "A";
+    if (score >= 80) return "B";
+    if (score >= 70) return "C";
+    if (score >= 60) return "D";
+    return "F";
+  }
+</script>
+<body>
+  <h2>고차함수 - every()</h2>
+  <div>
+    <input type="button" onclick="every01()" value="every01">
+    <input type="button" onclick="every02()" value="every02">
+  </div>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async/Await</title>
+</head>
+<body>
+  <h2>Async / Await</h2>  
+  <script>
+    function requestLogin(userid) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log(`${userid} 로그인 완료`);
+          resolve(userid);
+        }, 1000);
+      });
+    }
+
+    function getUserInfo(userid) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log(`${userid}의 사용자 정보 조회 완료`);
+          resolve({ userid, name: '성유겸' });
+        }, 1000);
+      });
+    }
+
+    function welcomeHome(responseInfo) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log(`아이디:${responseInfo.userid}`);
+          console.log(`${responseInfo.name}님, 환영합니다!`);
+          resolve();
+        }, 1000);
+      });
+    }
+
+    async function processMain() {
+      try {
+        const my_id = await requestLogin('gyeoms');
+        const my_info = await getUserInfo(my_id);
+        await welcomeHome(my_info);
+        console.log('작업 완료');
+      } 
+      catch (error) {
+        console.error('에러 발생:', error);
+      }
+    }
+  </script>
+  <div>
+    <button type="button" onclick="processMain();">로그인하기</button>
+  </div>
+</body>
+</html>

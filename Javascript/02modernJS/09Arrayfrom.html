@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array.from()</title>
+</head>
+<body>
+  <h2>Array.from()</h2>
+	<script>
+		(function func1() {
+			console.log('arguments', arguments);
+			//arguments.push(6);
+			let newArr = Array.from(arguments);
+			newArr.push(6);
+			console.log('결과1', newArr);
+		})(1, 2, 3, 4, 5);
+
+		((str) => {
+			//let result1 = str.map(char => char.toLowerCase());
+			let strArr = Array.from(str);
+			let result2 = strArr.map(char => char.toLowerCase());
+			console.log('결과2', result2); 
+		})('Hello');
+
+		((str) => {
+			const obj = { 0: "A", 1: "B", 2: "C", length: 3 };
+			console.log('결과3', Array.from(obj)); 
+		})();
+
+		((num) => {
+			let result = Array.from({ length: num }, (_, i) => i + 1);
+			console.log('결과4', result);
+		})(5);
+	</script>
+</body>
+</html>

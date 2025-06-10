@@ -1,0 +1,66 @@
+목차
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+##기본사용법 
+-리엑트기초(props, state, components 등)
+  react01-basic
+-게시판1(배열기반 게시판)
+  react02-board1-array
+-라우터(react-router-dom)
+  react03-router
+-수명주기
+  react04-lifecycle
+-게시판2(라우터+수명주기+RestAPI)
+  react05-board2-api
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+##리엑트 훅
+-useId, useRef, useMemo, useCallback
+  react06-hook-optimization
+-useReducer, useContext 
+  react07-hook-global-state
+-useImperativeHandle, useLayoutEffect, useDebugValue, useTransition 
+  react08-hook-enhanced
+
+React에서 함수형 컴포넌트와 Hook은 React 16.8 버전에서 처음으로 도입
+16.8 (2019)
+  useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue
+17 (2020)
+  🚫 새로운 훅 없음
+18 (2022)
+  useId, 
+  useTransition → 낮은 우선순위 상태 업데이트를 비동기적으로 처리하여 성능 최적화
+  useDeferredValue → 값의 업데이트를 지연시켜 성능을 최적화
+  useSyncExternalStore → 외부 저장소(store)의 상태를 동기적으로 구독
+19 (2024)
+  useOptimistic, useFormStatus, useFormState
+
+##React 19에서 추가된 훅
+useOptimistic()	낙관적 업데이트(Optimistic UI)를 쉽게 구현할 수 있도록 도와줌.
+useFormStatus()	<form>의 현재 상태(예: 제출 중)를 확인하는 데 사용됨.
+useFormState()	<form>과 관련된 상태를 관리하는 새로운 훅.
+useActionState()	서버 액션과 관련된 상태를 관리하는 훅.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+##상태관리 서드파티 라이브러리
+리덕스
+주스턴드
+
+##파이어베이스
+-firestore
+-realtime
+-storage
+-스코어보드 > firestore연동
+-채팅 > realtime연동
+-갤러리 > storage연동
+
+##Next.js
+-블라블라
+
+
+ 

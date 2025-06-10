@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>reduce()</title>
+</head>
+<script>
+	function reduce01(){		
+		console.error("기본사용법1-초깃값X, 반환값X");
+		var myNumbers = [1,2,3,4,5];
+		myNumbers.reduce(function(previousValue, currentValue, index, useArray) {
+			console.log(previousValue, currentValue, index, useArray); 
+		});		
+	}
+
+	function reduce02(){		
+		console.error("기본사용법2-초깃값O, 반환값X");
+		var myNumbers = [1,2,3,4,5];
+		myNumbers.reduce(function(previousValue, currentValue, index) {
+			console.log(previousValue, currentValue, index); 
+		}, 0);		
+	}
+	
+	function reduce03(){		
+		console.error("기본사용법3-초깃값O, 반환값O");
+		var myNumbers = [1,2,3,4,5];
+		var result = myNumbers.reduce(function(previousValue, currentValue) {
+			console.log(previousValue, currentValue); 
+			return previousValue + 10;
+		}, 0);
+		console.log('결과', result);
+	}
+
+	function reduce04(){
+		console.error("배열 요소의 합계");
+		var myNumbers = [1,2,3,4,5,6,7,8,9,10];
+		var result = myNumbers.reduce(function(prevVal, currVal) {
+			console.log(prevVal, currVal);
+			return prevVal + currVal;			
+		});
+		console.log('결과', result);
+	}
+ 
+	function reduce05(){
+		console.error("중복값 제거");
+		var myNumbers = [0,1,2,3,3,3,4,5,5,6,6]; 
+		var resultArr = myNumbers.reduce(function(prev, curr){							
+			if(prev.indexOf(curr)==-1){
+				prev.push(curr);
+			}
+			return prev;			
+		}, []);
+		console.log('결과', resultArr);
+	}
+</script>
+<body>
+	<h2>고차함수 - reduce()</h2>
+	<div>
+		<input type="button" onclick="reduce01();" value="reduce1">        
+		<input type="button" onclick="reduce02();" value="reduce2">
+		<input type="button" onclick="reduce03();" value="reduce3">
+		<input type="button" onclick="reduce04();" value="reduce4">
+		<input type="button" onclick="reduce05();" value="reduce5">
+	</div>    
+</body>
+</html>

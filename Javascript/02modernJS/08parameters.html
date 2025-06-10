@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>매개변수</title>
+</head>
+<body>
+	<h2>기본 매개변수와 나머지 매개변수</h2>
+	<script>
+		const func1 = (...params) => {
+			let sum = 0;
+			for (let item of params) {
+				sum += item;
+			}
+			return sum;
+		}
+		console.log('결과1-1', func1(1)); 
+		console.log('결과1-2', func1(1,2,3,4,5)); 
+
+		const func2 = (mode, ...params) => { 
+			if (mode==='add'){
+				let sum = 0;
+				for (let item of params) sum += item;    
+				return sum;    
+			} 
+			else if (mode==='multi'){
+				let mul = 1;
+				for (let item of params) mul *= item;
+				return mul;    
+			}
+		} 
+		console.log('결과2-1', func2('add', 1,2,3,4) ); // 10
+		console.log('결과2-2', func2('multi', 1,2,3,4) ); // 24
+
+		const func3 = (width=3, height=4) => {
+			return width * height;
+		}; 
+		console.log('결과3-1', func3());
+		console.log('결과3-2', func3(5));
+		console.log('결과3-3', func3(8, 9));
+		console.log('결과3-4', func3(undefined, 10));
+	</script>
+</body>
+</html>

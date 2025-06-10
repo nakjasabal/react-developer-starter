@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>forEach()</title>
+</head>
+<script>
+	function forEach01(){        
+		console.error("기본사용법");    
+		var myNumbers = [1,2,3,4,5];
+		myNumbers.forEach(function(currentValue, index, useArray){
+			console.log('현재값:'+currentValue, '인덱스:'+index, '배열:'+useArray);           
+		});
+	}; 
+
+	function forEach02(){
+		console.error("정수형 배열 사용");    
+		var myNumbers = [1,2,3,4,5,6,7,8,9,10];
+		var result = 0;
+		function calculationSum(myNum){
+			result += myNum;
+		}
+		myNumbers.forEach(calculationSum);
+		console.log('결과', result);
+	}
+
+	function forEach03(){
+		console.error("객체 배열 사용");
+		var objArr = [
+			{ idx: 1, name: "손오공" },
+			{ idx: 2, name: "저팔계" },
+			{ idx: 3, name: "사오정" }
+		];
+		var viewHtml = "";
+		objArr.forEach(function(item) {
+			viewHtml += '<li>'+item.idx+'.'+item.name +'</li>';
+		});
+		document.getElementById('display').innerHTML = viewHtml;
+	}
+</script>    
+<body>
+	<h2>고차함수 - forEach()</h2>
+	<div>
+		<input type="button" onclick="forEach01()" value="forEach1">
+		<input type="button" onclick="forEach02()" value="forEach2">
+		<input type="button" onclick="forEach03()" value="forEach3">
+	</div>
+	<ul id="display"></ul>
+</body>
+</html>

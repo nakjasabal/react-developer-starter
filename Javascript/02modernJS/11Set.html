@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Set</title>
+</head>
+<body>
+	<h2>Set</h2>
+	<script>
+		(() => {
+			console.error('기본사용법');
+			const numbers = new Set();
+			numbers.add(1);
+			numbers.add(2);
+			numbers.add(2); // 중복된 값은 무시됨
+			numbers.add(3);
+
+			console.log('결과:', numbers);
+			console.log('크기:', numbers.size);
+
+			numbers.forEach((value) => {
+				console.log('value:', value);
+			});
+		})();
+
+		(() => {
+			console.error('다양한 함수');
+			const frontEnd = new Set(['html', 'css', 'js', 'react']);
+			console.log('delete()-개별삭제:', frontEnd.delete('css'));
+			console.log('has()-존재확인:', frontEnd.has('css'));
+			console.log('clear()-전체삭제:', frontEnd.clear());
+		})();
+
+		(() => {
+			console.error('개별 요소 접근');
+			const dragonBall = new Set(['손오공', '베지터', '프리저']);
+			const data1 = dragonBall.values().next().value;
+			console.log('요소1', data1);
+
+			const dragonArr = Array.from(dragonBall);
+			console.log('요소2,3', dragonArr[1], dragonArr[2]);
+		})();
+	</script>
+</body>
+</html>

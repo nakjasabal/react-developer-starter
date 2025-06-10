@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 
+	Map과 Set은 ES6 (ECMAScript 2015)에서 도입됨.
+
+	기존 Object와 Array의 한계를 보완하기 위해 추가된 새로운 데이터 구조임.
+	✅ 즉, Map과 Set은 ES6에서 도입된 새로운 데이터 구조로, 기존 Object와 Array의 단점을 보완하는 역할을 합니다! 🚀
+
+	키-값(key-value) 구조, 키에 객체 사용 가능
+	키로 객체도 사용할 수 있음 (기존 Object는 문자열 키만 가능)
+	순서를 유지함
+
+	set() 메서드를 사용하여 데이터를 추가하고, 
+	get() 메서드를 통해 값을 조회합니다.
+
+	size 프로퍼티로 Map의 크기를 알 수 있고, 
+	forEach()를 이용하여 순회할 수 있습니다.
+	has()와 delete() 메서드로 키 존재 여부 확인 및 삭제가 가능합니다.
+	-->
+	<h2>Map</h2>
+	<script>
+		(() => {
+			console.error('기본사용법');
+			const person = new Map();
+			person.set('name', '성유겸');
+			person.set('age', 14);	
+			person.set('hobby', '축구');	
+						
+			console.log('크기:', person.size);
+			console.log('get()-개별인출:', person.get('name'));
+			console.log('has()-존재확인:', person.has('age'));
+			console.log('delete()-삭제:', person.delete('hobby'));
+			
+			for (const [key, value] of person) {
+				console.log(`${key} => ${value}`);
+			}
+		})();
+
+		(() => {
+			console.error('다양한 Key 사용');
+			const objKey = { idx: 1 }; //객체형 Key
+			const funcKey = () => {}; //함수형 Key
+			const strKey = '문자형'; //문자형 Key 
+			const numberKey = 10; //숫자형 Key 
+			
+			const friends = new Map();
+			friends.set(objKey, '손홍민');
+			friends.set(funcKey, '박지성');
+			friends.set(strKey, '차범근');
+			friends.set(numberKey, '안정환');
+
+			friends.forEach((value, key) => {
+				console.log('key:', key, 'value:', value);
+				//템플릿 리터럴로 출력하면 문자열로 자동변환되어 [object] 와 같이 출력됨
+				//console.log(`${key} : ${value}`);
+			});			
+		})();
+	</script>
+</body>
+</html>

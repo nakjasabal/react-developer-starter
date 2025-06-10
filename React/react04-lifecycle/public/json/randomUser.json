@@ -1,0 +1,280 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {"title": "Mr","first": "Jesse","last": "Barnes"},
+      "location": {
+        "street": {"number": 6492,"name": "Park Road"},
+        "city": "Killarney",
+        "state": "Kerry",
+        "country": "Ireland",
+        "postcode": 98886,
+        "coordinates": {"latitude": "-1.3391","longitude": "-16.2647"},
+        "timezone": {
+          "offset": "+3:30",
+          "description": "Tehran"
+        }
+      },
+      "email": "jesse.barnes@example.com",
+      "login": {
+        "uuid": "709a975f-49d1-4742-a43e-6acafe281db4",
+        "username": "bluetiger484",
+        "password": "cthulhu",
+        "salt": "qJZhBtiP",
+        "md5": "f1be52072009ef541aeeb51e9b0123aa",
+        "sha1": "eaa337deeb2ae415e688984c136cd25ada47fba3",
+        "sha256": "b084ded81480b879fb61446b11c03bfb95a937b927b209d40cfb3d765dad43a7"
+      },
+      "dob": {
+        "date": "1983-06-29T15:02:44.248Z",
+        "age": 40
+      },
+      "registered": {
+        "date": "2018-03-22T17:52:21.685Z",
+        "age": 6
+      },
+      "phone": "071-815-0872",
+      "cell": "081-814-5813",
+      "id": {
+        "name": "PPS",
+        "value": "1635076T"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/64.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/64.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/64.jpg"
+      },
+      "nat": "IE"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Hailey",
+        "last": "Hoffman"
+      },
+      "location": {
+        "street": {
+          "number": 9694,
+          "name": "Edwards Rd"
+        },
+        "city": "Tweed",
+        "state": "New South Wales",
+        "country": "Australia",
+        "postcode": 3460,
+        "coordinates": {
+          "latitude": "67.4921",
+          "longitude": "-114.5903"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "hailey.hoffman@example.com",
+      "login": {
+        "uuid": "79d152a4-90cb-40b6-ae7f-3e3d97925256",
+        "username": "heavylion797",
+        "password": "dodgeram",
+        "salt": "KBMiukvA",
+        "md5": "9415b6638fc1a5c711340ab346f90389",
+        "sha1": "504f78461516b2fd0a3c7b4d4cc8456c450827d7",
+        "sha256": "1f7472693dda53f7c841e3ad4306f729fa76b6bb2e706ae7662bb809fa3bccfa"
+      },
+      "dob": {
+        "date": "1968-06-17T22:23:41.459Z",
+        "age": 55
+      },
+      "registered": {
+        "date": "2003-08-17T20:21:44.597Z",
+        "age": 20
+      },
+      "phone": "04-8509-0756",
+      "cell": "0424-999-952",
+      "id": {
+        "name": "TFN",
+        "value": "207626101"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/52.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/52.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/52.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Ellie",
+        "last": "Patterson"
+      },
+      "location": {
+        "street": {
+          "number": 3803,
+          "name": "Killarney Road"
+        },
+        "city": "Lusk",
+        "state": "Limerick",
+        "country": "Ireland",
+        "postcode": 43460,
+        "coordinates": {
+          "latitude": "-36.0668",
+          "longitude": "-17.0922"
+        },
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "email": "ellie.patterson@example.com",
+      "login": {
+        "uuid": "8c6186d9-0e0b-48a3-bffe-f8441ba3a202",
+        "username": "ticklishdog920",
+        "password": "marcos",
+        "salt": "Msa8fh3f",
+        "md5": "dfe385f5f092d3f02a38a995efbb2bae",
+        "sha1": "0dc2a59aabf0004fee51dc6c47a66abe47cba169",
+        "sha256": "3d164ff66eaff4ba3c475664de0448a0f99445bda60bcdf3e11fd03d41a325af"
+      },
+      "dob": {
+        "date": "1961-09-14T20:47:28.945Z",
+        "age": 62
+      },
+      "registered": {
+        "date": "2011-02-22T14:50:33.686Z",
+        "age": 13
+      },
+      "phone": "031-447-3444",
+      "cell": "081-759-5416",
+      "id": {
+        "name": "PPS",
+        "value": "2307117T"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/6.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/6.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/6.jpg"
+      },
+      "nat": "IE"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Ekansh",
+        "last": "Padmanabha"
+      },
+      "location": {
+        "street": {
+          "number": 8828,
+          "name": "Swargate"
+        },
+        "city": "Bihar Sharif",
+        "state": "Kerala",
+        "country": "India",
+        "postcode": 18351,
+        "coordinates": {
+          "latitude": "-30.1149",
+          "longitude": "4.7437"
+        },
+        "timezone": {
+          "offset": "+5:45",
+          "description": "Kathmandu"
+        }
+      },
+      "email": "ekansh.padmanabha@example.com",
+      "login": {
+        "uuid": "a5bf4669-8594-40f1-9d19-d2e471676b67",
+        "username": "orangeleopard710",
+        "password": "vinnie",
+        "salt": "MUOgwWUW",
+        "md5": "63ae5ceca21e960e30420ce878bc61cd",
+        "sha1": "16bcd17d51e8e89308206765ab8fb09a63522b9e",
+        "sha256": "1b6afccdc7975568b72f9d67638118a8282d8fd422e09f825a8cf62775202281"
+      },
+      "dob": {
+        "date": "1965-06-02T06:13:55.337Z",
+        "age": 58
+      },
+      "registered": {
+        "date": "2004-01-17T03:47:33.236Z",
+        "age": 20
+      },
+      "phone": "8399174352",
+      "cell": "9698983550",
+      "id": {
+        "name": "UIDAI",
+        "value": "876736674721"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/33.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/33.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/33.jpg"
+      },
+      "nat": "IN"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "نيما",
+        "last": "کوتی"
+      },
+      "location": {
+        "street": {
+          "number": 8257,
+          "name": "امام خمینی"
+        },
+        "city": "مشهد",
+        "state": "کهگیلویه و بویراحمد",
+        "country": "Iran",
+        "postcode": 12831,
+        "coordinates": {
+          "latitude": "-4.2807",
+          "longitude": "-20.5936"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "nym.khwty@example.com",
+      "login": {
+        "uuid": "c8e86293-50c1-42c8-b59b-ee281aba15cb",
+        "username": "sadbutterfly854",
+        "password": "monster1",
+        "salt": "Qc3ZrH6I",
+        "md5": "96a0a4e0bbf7feb454ada862e88ba707",
+        "sha1": "50e209ce7c325f9475399c569842584a24bad3b7",
+        "sha256": "fe59a2f889130a51e06cea7f365220aa07a54e05d2301e51355906b6a383b884"
+      },
+      "dob": {
+        "date": "1976-10-21T00:20:59.604Z",
+        "age": 47
+      },
+      "registered": {
+        "date": "2010-01-13T19:19:14.495Z",
+        "age": 14
+      },
+      "phone": "070-52310431",
+      "cell": "0925-368-8866",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/19.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/19.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/19.jpg"
+      },
+      "nat": "IR"
+    }
+  ],
+  "info": {
+    "seed": "636f9d133ccf1a1f",
+    "results": 5,
+    "page": 1,
+    "version": "1.4"
+  }
+}

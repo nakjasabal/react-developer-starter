@@ -1,0 +1,6 @@
+div.container{
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+div.ctxb{
+  border: 3px solid gray; padding: 5px;
+}

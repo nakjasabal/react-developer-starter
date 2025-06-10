@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fetch API</title>
+</head>
+<body>
+  <h2>fetch() - post 방식</h2>
+  <script>
+  const reqeustData = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: 'React',
+        body: '최고의 프론트앤드 라이브러리',
+        userId: 1,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json)
+      document.getElementById('callBackMsg').innerText = 
+        JSON.stringify(json);
+    });
+  }
+  </script>
+  <div id="callBackMsg"></div>
+  <div>
+    <button onclick="reqeustData();">요청하기</button>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for~of문</title>
+</head>
+<body>
+	<h2>for ~ of</h2>
+	<script>
+		const myArray = [10, '이십', 30];
+		(() => {
+			console.error("일반 for문으로 반복")
+			for (let i = 0; i < myArray.length; i++) {
+				console.log(myArray[i]);
+			}
+			
+			console.error("for~in으로 반복")
+			for (const i in myArray) {
+				console.log(i, myArray[i]);
+			}  
+	
+			console.error("for~of로 반복")
+			for (const v of myArray) {
+				console.log(v);
+			}  
+		})();
+	</script>
+</body>
+</html>

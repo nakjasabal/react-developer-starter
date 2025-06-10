@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function forEach01(){        
+        console.error("기본사용법");
+        var myNumbers = [1,2,3];
+        
+        myNumbers.forEach(function(currentValue, index, useArray){
+
+                     
+        });
+    }; 
+    
+    function map01(){
+        console.error("기본사용법");
+        var myNumbers = [1,2,3];
+        var resultArr = myNumbers.map(function(currentValue, index, useArray){
+          console.log('현재값:'+currentValue); 
+          return currentValue + 1;
+        });
+        console.log('결과', resultArr);
+    }
+    
+    function filter01(){
+        console.error("기본사용법");    
+        var myNumbers = [1,2,3];
+        var resultArr = myNumbers.filter(function(currentValue, index, useArray){
+          console.log('현재값:'+currentValue); 
+          return currentValue <= 2;
+        });
+        console.log('결과', resultArr);
+    }
+
+
+    function reduce01(){		
+        console.error("기본사용법1-초깃값X, 리턴X");
+        var myNumbers = [1,2,3];
+        myNumbers.reduce(function(previousValue, currentValue, index) {
+          console.log('이전값:'+ previousValue); 
+          console.log('현재값:'+ currentValue); 
+        });		
+    }
+
+    function reduce02(){		
+        console.error("기본사용법2-초깃값O, 리턴X");
+        var myNumbers = [1,2,3];
+        myNumbers.reduce(function(previousValue, currentValue, index) {
+          console.log('이전값:'+ previousValue); 
+          console.log('현재값:'+ currentValue); 
+        }, 0);		
+    }
+
+    function reduce03(){		
+        console.error("기본사용법3-초깃값O, 리턴O");
+        var myNumbers = [1,2,3];
+        var result = myNumbers.reduce(function(previousValue, currentValue) {
+          console.log('이전값:'+ previousValue); 
+          console.log('현재값:'+ currentValue); 
+          return previousValue + 3;
+        }, 0);		
+    }
+</script>    
+<body>
+ 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조분해할당</title>
+</head>
+<body>
+    <h2>구조분해할당(Destructuring assignment)</h2>
+    <script>
+    /*
+    구조분해할당 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 
+    담을 수 있게 하는 JavaScript 표현식이다.
+    */
+    //배열의 원소를 순서대로 할당한다. 
+    let func1 = () => {
+        let nameArr = ["YuGyeom", "Sung"]    
+        let [firstName, lastName] = nameArr;
+        console.log('결과1', firstName, lastName); 
+    }
+    
+    //문자열을 split()하면 배열로 반환되므로 좌측항에 순서대로 할당한다. 
+    let func2 = () => {
+        let [firstName, lastName] = "YuGyeom Sung".split(' ');
+        console.log('결과2', firstName, lastName);
+    }
+
+    //배열의 원소를 변수에 지정하여 할당할 수 있다. 
+    let func3 = () => {
+        let [person1, ,person3] = ["유비", "관우", "장비", "조자룡"];
+        console.log('결과3', person1, person3);
+    }
+
+    //스프레드 연산자와 같이 사용하면 변수와 배열을 동시에 할당할 수 있다. 
+    let func4 = () => {
+        let [name1, name2, ...rest] = ["유비", "관우", "장비", "조자룡"];
+        //name은 변수로 선언된다. 
+        console.log('결과4-1', name1, name2);
+        //rest는 배열로 선언된다.
+        console.log('결과4-2', rest[0], rest[1], rest.length);
+    }
+    </script>
+    <button type="button" onclick="func1();">버튼1</button>
+    <button type="button" onclick="func2();">버튼2</button>
+    <button type="button" onclick="func3();">버튼3</button>
+    <button type="button" onclick="func4();">버튼4</button>
+</body>
+</html>
