@@ -1,19 +1,45 @@
-import reactImage from './assets/Reactjs.png';
-import reactLogo from './assets/react.svg'
+function FrontComp(props) {
+  // props.frTitle = "프론트앤드 프롭스 변경하기"
+  const liRows = [];
+  for(let i=0 ; i<props.propData1.length ; i++){    
+    liRows.push(
+      <li key={i}>{props.propData1[i]}</li>
+    );
+  }
+  return (<>
+    <li>{props.frTitle}</li>
+    <ul>
+      {liRows}
+    </ul>
+  </>)
+}
+
+const BackComp = ({propData2, baTitle}) => {
+  const liRows = [];
+  let keyCnt=0;
+  for(let row of propData2){
+    liRows.push(
+      <li key={keyCnt++}>{row}</li>
+    );
+  }
+  return (<>
+    <li>{baTitle}</li>
+    <ul>
+      {liRows}       
+    </ul>
+  </>)
+}
 
 function App() {
-  const iWidth = {width:'200px'};
+  const frontData = ['HTML5', 'CSS3', 'Javascript', 'jQuery', 'React추가'];
+  const backData = ['Java', 'Oracle', 'JSP', 'Spring Boot', 'Nextjs추가'];
   return (<>
     <div>
-      <h2>React-이미지</h2>      
-      <h4>public 폴더 하위의 이미지</h4>
-      <img src="/img/React.png" style={iWidth} />      
-      <h4>src/assets 폴더 하위의 이미지</h4>
-      <img src={reactImage} style={iWidth} />      
-      <h4>vite 기본 프로젝트에서 제공되는 이미지</h4>
-      <img src={reactLogo} style={iWidth} />
-      <h4>웹 이미지</h4>
-      <img src="http://nakja.co.kr/images/Reactjs-web.png" style={iWidth} />
+      <h2>React-Props</h2>
+      <ol>
+        <FrontComp propData1={frontData} frTitle="프론트앤드"></FrontComp>
+        <BackComp propData2={backData} baTitle="백앤드"/>
+      </ol>
     </div>
   </>)
 }
