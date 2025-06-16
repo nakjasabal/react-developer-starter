@@ -1,5 +1,5 @@
 function FrontComp(props) {
-  // props.frTitle = "프론트앤드 프롭스 변경하기"
+  // props.frTitle = "프롭스 변경하기 Error";
   const liRows = [];
   for(let i=0 ; i<props.propData1.length ; i++){    
     liRows.push(
