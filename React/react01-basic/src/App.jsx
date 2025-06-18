@@ -1,46 +1,36 @@
-function FrontComp(props) {
-  // props.frTitle = "프롭스 변경하기 Error";
-  const liRows = [];
-  for(let i=0 ; i<props.propData1.length ; i++){    
-    liRows.push(
-      <li key={i}>{props.propData1[i]}</li>
-    );
-  }
-  return (<>
-    <li>{props.frTitle}</li>
-    <ul>
-      {liRows}
-    </ul>
-  </>)
-}
-
-const BackComp = ({propData2, baTitle}) => {
-  const liRows = [];
-  let keyCnt=0;
-  for(let row of propData2){
-    liRows.push(
-      <li key={keyCnt++}>{row}</li>
-    );
-  }
-  return (<>
-    <li>{baTitle}</li>
-    <ul>
-      {liRows}       
-    </ul>
-  </>)
-}
-
 function App() {
-  const frontData = ['HTML5', 'CSS3', 'Javascript', 'jQuery', 'React추가'];
-  const backData = ['Java', 'Oracle', 'JSP', 'Spring Boot', 'Nextjs추가'];
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Verdana"
+  };
   return (<>
-    <div>
-      <h2>React-Props</h2>
-      <ol>
-        <FrontComp propData1={frontData} frTitle="프론트앤드"></FrontComp>
-        <BackComp propData2={backData} baTitle="백앤드"/>
-      </ol>
-    </div>
+    <h2>React-Style</h2>    
+    <ol>
+      <li style={{color : "red"}}>프론트앤드</li>
+      <ul style={myStyle}>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Javascript</li>
+        <li>jQuery</li>
+      </ul>
+      <li className='backEnd'>백앤드</li>
+      <ul>
+        <li id='backEndSub'>Java</li>
+        <li class='warnings'>Oracle</li>
+        <li>JSP</li>
+        <li>Spring Boot</li>
+      </ul>
+    </ol>
+    <form>
+      <select name="gubun">
+        <option value="front">프런트앤드</option>
+        <option value="back">백앤드</option>
+      </select>
+      <input type="text" name="title" />
+      <input type="submit" value="추가" />
+    </form>
   </>)
 }
 

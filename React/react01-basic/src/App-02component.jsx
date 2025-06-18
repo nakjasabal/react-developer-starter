@@ -9,7 +9,6 @@ function FrontComp() {
     </ul>
   </>)
 }
-
 const BackComp = () => {
   return (<>
     <li>백앤드</li>
@@ -21,16 +20,26 @@ const BackComp = () => {
     </ul>
   </>)
 }
-
-function App() {
+let FormComp = function() {
   return (<>
-    <div>
-      <h2>React-Component</h2>
-      <ol>
-        <FrontComp></FrontComp>
-        <BackComp />
-      </ol>
-    </div>
+    <form>
+      <select name="gubun">
+        <option value="front">프런트앤드</option>
+        <option value="back">백앤드</option>
+      </select>
+      <input type="text" name="title" />
+      <input type="submit" value="추가" />
+    </form>  
+  </>);
+}
+function App() {
+  return (<>    
+    <h2>React-Component</h2>
+    <ol>
+      <FrontComp></FrontComp>
+      <BackComp />
+    </ol>
+    <FormComp />
   </>)
 }
 
