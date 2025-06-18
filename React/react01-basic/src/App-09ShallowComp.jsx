@@ -1,25 +1,38 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
+const TopComp = ({MyData}) => {
+  return (<>
+    <ol>
+      <li>프런트앤드</li>
+      <ul>
+        {MyData.front.map((item, i) => <li key={i}>{item}</li>)}
+      </ul>
+      <li>백앤드</li>
+      <ul>
+        {MyData.back.map((item, i) => <li key={i}>{item}</li>)}
+      </ul>
+    </ol>
+  </>)
+}
 function App() {
-  const [myCount, setMyCount] = useState({cnt : 0});
-  const plusMyCount1 = () => {
-    myCount.cnt += 1;
-    setMyCount(myCount);
-    console.log("변경후1", myCount);
+  const [MyData, setMyData] = useState({
+    front: ['HTML5', 'CSS3', 'Javascript', 'jQuery'],
+    back: ['Java', 'Oracle', 'JSP', 'Spring Boot'],
+  });
+  const addFront = () => {
+    MyData.front.push('React');
+    setMyData(MyData); 
   }
-  const plusMyCount2 = () => {
-    let newMyCount = {...myCount};
-    newMyCount.cnt += 1;
-    setMyCount(newMyCount);
-    console.log("변경후2", myCount);
+  const addBack = () => {
+    const newBack = [...MyData.back, 'Node.js'];
+    const newMyData = { ...MyData, back: newBack }; 
+    setMyData(newMyData);
   }
   return (<>
-    <div>
-      <h2>React-얕은비교</h2>
-      <p>Count : { myCount.cnt }</p>
-      <button type='button' onClick={plusMyCount1}>원본증가</button>
-      <button type='button' onClick={plusMyCount2}>복사본증가</button>
-    </div>
+    <h2>React-Shallow Comparison</h2>
+    <TopComp MyData={MyData} />
+    <button type='button' onClick={addFront}>프런트추가</button>
+    <button type='button' onClick={addBack}>백앤드추가</button>
   </>)
 }
 

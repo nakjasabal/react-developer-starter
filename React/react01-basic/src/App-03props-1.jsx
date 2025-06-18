@@ -13,7 +13,6 @@ function FrontComp(props) {
     </ul>
   </>)
 }
-
 const BackComp = ({propData2, baTitle}) => {
   const liRows = [];
   let keyCnt=0;
@@ -29,14 +28,13 @@ const BackComp = ({propData2, baTitle}) => {
     </ul>
   </>)
 }
-
 function App() {
   const frontData = ['HTML5', 'CSS3', 'Javascript', 'jQuery', 'React추가'];
   const backData = ['Java', 'Oracle', 'JSP', 'Spring Boot', 'Nextjs추가'];
   return (<>
     <h2>React-Props</h2>
     <ol>
-      <FrontComp propData1={frontData} frTitle="프론트앤드"></FrontComp>
+      <FrontComp propData1={frontData} frTitle="프런트앤드"></FrontComp>
       <BackComp propData2={backData} baTitle="백앤드"/>
     </ol>
   </>)

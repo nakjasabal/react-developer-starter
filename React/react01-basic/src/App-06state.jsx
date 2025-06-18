@@ -5,7 +5,7 @@ const FrontComp = (props) => {
     <li><a href="/" onClick={(event)=>{      
       event.preventDefault();
       props.onSetMode('front');
-    }}>프론트앤드</a></li>
+    }}>프런트앤드</a></li>
     <ul>
       <li>HTML5</li>
       <li>CSS3</li>
@@ -54,7 +54,6 @@ function App() {
       <BackComp setMode={handleSetMode} />
     </>
   }
- 
   return (<>
     <h2><a href="/" onClick={(event)=>{
       event.preventDefault();

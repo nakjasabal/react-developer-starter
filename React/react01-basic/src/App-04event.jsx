@@ -2,7 +2,7 @@ function FrontComp(props) {
   return (<>
     <li><a href='/' onClick={()=>{
       props.onMyEvent1();
-    }}>프론트앤드</a></li>
+    }}>프런트앤드</a></li>
     <ul>
       <li>HTML5</li>
       <li>CSS3</li>
@@ -30,7 +30,7 @@ function App() {
     <h2>React-Event</h2>
     <ol>
       <FrontComp onMyEvent1={()=>{
-        alert('프론트앤드 클릭됨(부모전달)');
+        alert('프런트앤드 클릭됨(부모전달)');
       }}></FrontComp>
       <BackComp onMyEvent2={(msg)=>{
         alert(msg);
