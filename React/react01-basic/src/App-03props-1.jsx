@@ -34,8 +34,8 @@ function App() {
   return (<>
     <h2>React-Props</h2>
     <ol>
-      <FrontComp propData1={frontData} frTitle="프런트앤드"></FrontComp>
-      <BackComp propData2={backData} baTitle="백앤드"/>
+      <FrontComp propData1={frontData} frTitle="프론트엔드"></FrontComp>
+      <BackComp propData2={backData} baTitle="백엔드"/>
     </ol>
   </>)
 }

@@ -1,33 +1,7 @@
 import { useState } from 'react';
+import FrontComp from './components/FrontComp';
+import BackComp from './components/BackComp';
 
-const FrontComp = (props) => {
-  return (<>
-    <li><a href="/" onClick={(event)=>{      
-      event.preventDefault();
-      props.onSetMode('front');
-    }}>프런트앤드</a></li>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>Javascript</li>
-      <li>jQuery</li>
-    </ul>
-  </>)
-}
-const BackComp = ({setMode}) => {
-  return (<>
-    <li><a href="/" onClick={(event)=>{      
-      event.preventDefault();
-      setMode('back');
-    }}>백앤드</a></li>
-    <ul>
-      <li>Java</li>
-      <li>Oracle</li>
-      <li>JSP</li>
-      <li>Spring Boot</li>
-    </ul>
-  </>)
-}
 function App() {
   const [mode, setMode] = useState('both');
   const handleSetMode = (mode) => {

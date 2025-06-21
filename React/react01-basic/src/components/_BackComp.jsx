@@ -1,8 +1,8 @@
-const BackComp = ({setMode}) => {
+const BackComp = ({onMyEvent2}) => {  
   return (<>
-    <li><a href="/" onClick={(event)=>{      
+    <li><a href="/" onClick={(event)=>{
       event.preventDefault();
-      setMode('back');
+      onMyEvent2('백엔드 클릭됨(자식전달)');
     }}>백엔드</a></li>
     <ul>
       <li>Java</li>

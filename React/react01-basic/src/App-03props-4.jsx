@@ -1,6 +1,6 @@
 function MyComponent({p1, p3}) {
   return (<>
-    <h2>프롭스 구조 분해 할당</h2>
+    <h2>프롭스 구조분해할당</h2>
     <p>
       {p1}, {p3}
     </p>

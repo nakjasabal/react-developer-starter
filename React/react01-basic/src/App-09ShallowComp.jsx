@@ -3,11 +3,11 @@ import { useState } from 'react';
 const TopComp = ({MyData}) => {
   return (<>
     <ol>
-      <li>프런트앤드</li>
+      <li>프론트엔드</li>
       <ul>
         {MyData.front.map((item, i) => <li key={i}>{item}</li>)}
       </ul>
-      <li>백앤드</li>
+      <li>백엔드</li>
       <ul>
         {MyData.back.map((item, i) => <li key={i}>{item}</li>)}
       </ul>
@@ -31,8 +31,8 @@ function App() {
   return (<>
     <h2>React-Shallow Comparison</h2>
     <TopComp MyData={MyData} />
-    <button type='button' onClick={addFront}>프런트추가</button>
-    <button type='button' onClick={addBack}>백앤드추가</button>
+    <button type='button' onClick={addFront}>프론트엔드추가</button>
+    <button type='button' onClick={addBack}>백엔드추가</button>
   </>)
 }
 
