@@ -8,7 +8,7 @@ function NavView(props){
       <a href="/" onClick={function(event){
         event.preventDefault();
         props.onChangeMode('edit');
-      }}>수정</a>{" "}
+      }}>수정</a>&nbsp;
       <a href="/" onClick={function(event){//** */
         event.preventDefault();
         if(window.confirm('삭제할까요?')){

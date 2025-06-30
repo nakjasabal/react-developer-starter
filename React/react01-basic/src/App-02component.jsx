@@ -38,6 +38,7 @@ function App() {
     <ol>
       <FrontComp></FrontComp>
       <BackComp />
+      <BackComp />
     </ol>
     <FormComp />
   </>)
