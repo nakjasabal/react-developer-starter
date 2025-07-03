@@ -5,7 +5,7 @@ function NotFound() {
     <h2>Not Found</h2>
     <p>
       페이지를 찾을 수 없습니다. ㅜㅜ <br/>
-      <Link to="/list">Home</Link>
+      <Link to="/list">목록바로가기</Link>
     </p>
   </>);
 }
