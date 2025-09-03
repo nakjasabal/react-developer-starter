@@ -5,7 +5,7 @@ let nextIdx = 2;
 const todoSlice = createSlice({
   name: 'myTodos',
   initialState: [
-    {idx: 1, contents: '리덕스공부', done: false }
+    {idx: 1, contents: '리덕스툴킷공부', done: false }
   ], 
   reducers: {
     addTodo: (prevState, action) => {

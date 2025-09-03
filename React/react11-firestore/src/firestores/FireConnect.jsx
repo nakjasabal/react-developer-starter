@@ -17,10 +17,10 @@ const FireConnect = () => {
     const docRef = doc(firestore, "React", "Firebase");
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      console.log("도큐먼트:", docSnap.data());
+      console.log("문서:", docSnap.data());
     } 
     else {
-      console.log("도큐먼트가 없습니다.");
+      console.log("문서가 없습니다.");
     }
   }
 

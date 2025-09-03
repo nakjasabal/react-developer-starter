@@ -12,7 +12,7 @@ const FireUpdate = () => {
   const [name, setName] = useState('');
 
   const memberEdit = async (p_collection) => {
-    await setDoc(doc(firestore, p_collection, params.userid), {      
+    await setDoc(doc(firestore, p_collection, params.userid), {
       id, 
       pass, 
       name, 
@@ -26,14 +26,14 @@ const FireUpdate = () => {
     const docRef = doc(firestore, "members", userid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      console.log("도큐먼트:", docSnap.data());
+      console.log("문서:", docSnap.data());
       let callData = docSnap.data();
       setId(callData.id);
       setPass(callData.pass);
       setName(callData.name);
     } 
     else {
-      console.log("도큐먼트가 없습니다");
+      console.log("문서가 없습니다");
     }
   }
  
