@@ -13,7 +13,6 @@ function ChatMessage() {
   const roomId = searchParams.get('roomId');
   const userId = searchParams.get('userId');
   const chatWindow = useRef();
-  const timerRef = useRef(0);
   const [chatData, setChatData] = useState('');
 
   function messageWrite(chatRoom, chatId, chatMessage) {
@@ -28,7 +27,7 @@ function ChatMessage() {
   const dbRef = ref(realtime, roomId);
   useEffect(() => {    
     onValue(dbRef, (snapshot) => {
-      timerRef.current = setTimeout(()=>{
+      setTimeout(()=>{
         scrollTop(chatWindow.current);
       }, 200);    
       let showDiv = [];      

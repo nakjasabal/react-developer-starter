@@ -1,30 +1,30 @@
+import jqueryLogo from './assets/jquery.png';
+
 function App() {
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Verdana"
+  };
+  const iWidth = {maxWidth:'300px'};
   return (<>
-    <h2>React-기본</h2>    
+    <h2>React-Style</h2>    
     <ol>
-      <li>프론트엔드</li>
+      <li style={{color : "red"}}>프론트엔드</li>
       <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Javascript</li>
-        <li>jQuery</li>
+        <li><img src="/img/html_css_js.png" style={iWidth} /></li>
+        <li><img src={jqueryLogo} style={iWidth} /></li>
+        <li><img src="http://nakja.co.kr/images/reactjs.png" style={iWidth} /></li>
       </ul>
-      <li>백엔드</li>
+      <li className='backEnd'>백엔드</li>
       <ul>
-        <li>Java</li>
-        <li>Oracle</li>
-        <li>JSP</li>
+        <li id='backEndSub'>Java</li>
+        <li class='warnings'>Oracle</li>
+        <li style={myStyle}>JSP</li>
         <li>Spring Boot</li>
       </ul>
     </ol>
-    <form>
-      <select name="gubun">
-        <option value="front">프론트엔드</option>
-        <option value="back">백엔드</option>
-      </select>
-      <input type="text" name="title" />
-      <input type="submit" value="추가" />
-    </form>
   </>)
 }
 

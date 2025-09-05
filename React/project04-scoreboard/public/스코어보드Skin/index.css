@@ -1,0 +1,314 @@
+/* ELEMENT STYLES -------------------- */
+
+.header {
+  color: #FFF;
+  padding: 5px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #5E0035; /* 진한 와인색 */
+  border-bottom: solid 2px #C58CA8;
+}
+
+.header .h1 {
+  flex-grow: 1;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+/* FORMS */
+
+.form {
+  display: flex;
+  background-color: #5E0035; /* 입력용 */
+}
+
+.editform {
+  display: flex;
+  background-color: #944E6C; /* 수정용 */
+}
+
+.input[type=text] {
+  flex-grow: 1;
+  border-width: 0 0 1px 0;
+  margin: 15px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #7A184E;
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #FFD6E4;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.input[type=text]::-webkit-input-placeholder {
+  color: #FFD6E4;
+  letter-spacing: 2px;
+}
+
+.input[type=text]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input[type=submit] {
+  display: block;
+  font-size: .6em;
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+  background-color: #3B001F;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* 수정용 입력 */
+
+.editInput[type=text] {
+  flex-grow: 1;
+  border-width: 0 0 1px 0;
+  margin: 15px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #B96E8B;
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #FFE3F0;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.editInput[type=text]::-webkit-input-placeholder {
+  color: #FFE3F0;
+  letter-spacing: 2px;
+}
+
+.editInput[type=text]:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.editInput[type=submit] {
+  display: block;
+  font-size: .6em;
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+  background-color: #622F45;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button,
+.input[type=submit],
+.editInput[type=submit] {
+  outline: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ICONS */
+
+.svg {
+  width: 28px;
+  height: 19px;
+  margin-right: 5px;
+  fill: #F0F0F0;
+}
+
+.is-high-score {
+  fill: #FFC657;
+  animation: grow 0.35s ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+@keyframes grow {
+  50% { transform: scale(1.4) rotate(-3deg); }
+}
+
+/* COMPONENT STYLES -------------------- */
+
+.scoreboard {
+  background: #fff;
+  width: 700px;
+  margin: 1rem auto;
+  box-shadow: 0 2px 0 #5E0035;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.player {
+  display: flex;
+  font-size: 1.2em;
+  border-bottom: solid 2px #EEEEEE;
+  border-left: solid 2px #EEEEEE;
+  letter-spacing: 2px;
+}
+
+.player:last-of-type {
+  border-bottom-color: #C58CA8;
+}
+
+.player-name:hover .remove-player {
+  visibility: visible;
+}
+
+.player-name,
+.counter-score {
+  color: #5E0035;
+}
+
+.player-name {
+  flex-grow: 1;
+  line-height: 3.5em;
+  padding-left: 10px;
+}
+
+.remove-player {
+  font-size: 1.15em;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: #EF5350;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  padding: 0;
+  background: none;
+}
+
+.stats,
+.stopwatch {
+  width: 190px;
+}
+
+.stats {
+  margin: 0 0 0 28px;
+  font-weight: normal;
+}
+
+.stats td:first-child {
+  text-align: right;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: .7em;
+}
+
+.stats td:last-child {
+  text-align: left;
+}
+
+.stopwatch {
+  padding: 15px 10px 5px 10px;
+  margin: -5px -10px -5px 10px;
+  background: #7A184E;
+}
+
+.stopwatch-time {
+  display: block;
+  font-family: monospace;
+  font-size: 2.15em;
+}
+
+.stopwatch button {
+  margin: 8px 5px;
+  background-color: #3B001F;
+  border-radius: 5px;
+  padding: 7px 8px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.stopwatch button:hover,
+.input[type=submit]:hover,
+.editInput[type=submit]:hover {
+  background: #fff;
+  color: #5E0035;
+  cursor: pointer;
+}
+
+.stopwatch h2 {
+  font-size: .6em;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.counter {
+  display: flex;
+  width: 190px;
+}
+
+.counter-action {
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #FFD6E4;
+  background-color: #944E6C;
+  display: block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.counter-action:hover {
+  color: #fff;
+}
+
+.increment:hover {
+  background: #83D97C;
+}
+
+.decrement:hover {
+  background: #EF5350;
+}
+
+.counter-score {
+  flex-grow: 1;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  background: #944E6C;
+}
+
+.all-title {
+  background: #5E0035;
+  padding: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.good-title {
+  background: #7B9A5D;
+  padding: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.bad-title {
+  background: #AB4D55;
+  padding: 1rem;
+  color: white;
+  margin: 0;
+}

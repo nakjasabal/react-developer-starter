@@ -13,11 +13,9 @@ function App() {
       <Route path='/list' element={<List />} />
       <Route path='/write' element={<Write />} />
       <Route path='/view'>
-        <Route path=":idx" element={<View />} />
+        <Route path=':idx' element={<View />} />
       </Route>
-      <Route path='/edit'>
-        <Route path=":idx" element={<Edit />} />
-      </Route>
+      <Route path='/edit/:idx' element={<Edit />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   </>);

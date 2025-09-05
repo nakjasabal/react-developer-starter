@@ -74,8 +74,8 @@ function View() {
           </tr>
           <tr>
             <th>내용</th>
-            {/* <td>{boardData.content}</td> */}            
-            <td dangerouslySetInnerHTML={{__html: boardData.content}} style={{'whiteSpace':'pre-wrap'}}></td>
+            <td>{boardData.content}</td>
+            {/* <td dangerouslySetInnerHTML={{__html: boardData.content}} style={{'whiteSpace':'pre-wrap'}}></td> */}
           </tr>
         </tbody>
       </table> 
