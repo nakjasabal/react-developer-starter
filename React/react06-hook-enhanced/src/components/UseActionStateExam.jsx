@@ -20,7 +20,7 @@ async function authLogin(prevState, formData) {
 const UseActionStateExam = () => {
   const [message, formAction, isPending] = useActionState(authLogin, null);
   return (<>
-    <h2>useActionStatus 사용하기</h2>
+    <h2>useActionState 사용하기</h2>
     <form action={formAction}>
       아이디 : <input type="text" name="userid" /> <br />
       비번 : <input type="text" name="userpw" /> <br />
