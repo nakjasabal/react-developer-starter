@@ -57,7 +57,7 @@ function App() {
     articleComp = <ArticleView selectRow={selectRow}></ArticleView>
   }
   else if(mode==='write'){
-    titleVar = '게시판-작성성';
+    titleVar = '게시판-작성';
     navComp = <NavWrite onChangeMode={()=>{
       setMode('list');
     }}></NavWrite>

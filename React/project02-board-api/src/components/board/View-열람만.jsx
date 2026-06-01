@@ -26,35 +26,7 @@ function View() {
     <nav>
       <Link to="/list">목록</Link>&nbsp; 
       <Link to={"/edit/"+params.idx}>수정</Link>&nbsp; 
-      <Link onClick={() => {
-        if(window.confirm('삭제하시겠습니까?')){
-          fetch("http://nakja.co.kr/APIs/php7/boardDeleteJSON.php",
-          {
-            method: 'POST',
-            headers: {
-              'Content-type':
-                'application/x-www-form-urlencoded;charset=UTF-8',
-            },
-            body: new URLSearchParams({
-              tname: 'board_apis',
-              idx: params.idx,
-              apikey: '42db3e68e07b870208f59f87242a0752',
-            }),
-          })
-          .then((result)=>{
-            return result.json();
-          })
-          .then((json)=>{
-            if(json.result==='success'){
-              alert('삭제되었습니다.');
-              navigate("/list");
-            }
-            else{
-              alert('삭제에 실패했습니다.');
-            }
-          });
-        }
-      }}>삭제</Link>
+      <Link onClick={() => {}}>삭제</Link>
     </nav>
     <article>
       <table id="boardTable">

@@ -29,11 +29,15 @@ const UseRefExam2 = () => {
   return (<>
     <h2>useRef 사용하기2</h2>
     <form>
-      패스워드1 : <input type='text' ref={passRef1} name='pass1' /> <br />
-      패스워드2 : <input type='text' ref={passRef2} name='pass2' /> <br />
+      패스워드1 : <input type='text' ref={passRef1} name='pass1' /> 
+      <br />
+      패스워드2 : <input type='text' ref={passRef2} name='pass2' /> 
+      <br />
       <button type='button' onClick={checkPassword}>패스워드확인</button>  
     </form> 
   </>);
 }
 
 export default UseRefExam2;
+
+

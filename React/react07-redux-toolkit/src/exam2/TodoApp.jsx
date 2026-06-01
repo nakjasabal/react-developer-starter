@@ -28,7 +28,9 @@ const TodoApp = () => {
             onClick={() => dispatch(toggleTodo(todoRow.idx))}>
             {todoRow.contents}
           </span>
-          <button onClick={() => dispatch(deleteTodo(todoRow.idx))}>삭제</button>
+          <button onClick={() => dispatch(deleteTodo(todoRow.idx))}>
+            삭제
+          </button>
         </li>
       ))}
     </ul>

@@ -15,10 +15,13 @@ function Write() {
     <form onSubmit={
       (event)=>{
         event.preventDefault();
-        fetch('http://nakja.co.kr/APIs/php7/boardWriteJSON.php', {
+        fetch(
+          'http://nakja.co.kr/APIs/php7/boardWriteJSON.php', 
+          {
           method: 'POST',
           headers: {
-            'Content-type':'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-type':
+              'application/x-www-form-urlencoded;charset=UTF-8',
           },
           body: new URLSearchParams({
             tname: 'board_apis',           
@@ -46,7 +49,8 @@ function Write() {
           </tr>
           <tr>
             <th>내용</th>
-            <td><textarea name="contents" rows="3"></textarea></td>
+            <td><textarea name="contents" 
+                        rows="3"></textarea></td>
           </tr>
         </tbody>
       </table>
@@ -57,3 +61,5 @@ function Write() {
 }
 
 export default Write;
+
+

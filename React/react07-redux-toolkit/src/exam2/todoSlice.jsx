@@ -9,7 +9,8 @@ const todoSlice = createSlice({
   ], 
   reducers: {
     addTodo: (prevState, action) => {
-      prevState.push({ idx: nextIdx++, contents: action.payload, done: false });
+      prevState.push({ idx: nextIdx++, 
+        contents: action.payload, done: false });
     },
     toggleTodo: (prevState, action) => {
       const todoRow = prevState.find(t => t.idx === action.payload);
@@ -23,3 +24,4 @@ const todoSlice = createSlice({
 
 export const { addTodo, toggleTodo, deleteTodo } = todoSlice.actions;
 export default todoSlice.reducer;
+

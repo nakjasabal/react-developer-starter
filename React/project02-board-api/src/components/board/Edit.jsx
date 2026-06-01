@@ -35,10 +35,12 @@ function Edit() {
     <form onSubmit={
       (event)=>{
         event.preventDefault();
-        fetch('http://nakja.co.kr/APIs/php7/boardEditJSON.php', {
+        fetch('http://nakja.co.kr/APIs/php7/boardEditJSON.php', 
+        {
           method: 'POST',
           headers: {
-            'Content-type':'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-type':
+              'application/x-www-form-urlencoded;charset=UTF-8',
           },
           body: new URLSearchParams({
             tname: 'board_apis',
@@ -84,3 +86,4 @@ function Edit() {
 }
 
 export default Edit;
+

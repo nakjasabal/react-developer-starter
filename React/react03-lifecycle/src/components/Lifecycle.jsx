@@ -6,9 +6,9 @@ function MoveBox(props){
   const [position, setPosition] = useState(props.initPosition);
   const [leftCount, setLeftCount] = useState(1);
   const boxStyle = {
-    backgroundColor: 'red', position: 'relative', textAlign: 'center',
-    width: '100px', height: '100px', margin: '10px', lineHeight: '100px', 
-    left: `${position}px`
+    backgroundColor: 'red', position: 'relative', 
+    textAlign: 'center', width: '100px', height: '100px', 
+    margin: '10px', lineHeight: '100px', left: `${position}px`
   };
 
   const moveLeft = () => {
@@ -31,14 +31,12 @@ function MoveBox(props){
 
   
   console.log('return실행==>2.렌더링(return문))');
-  return (
-    <div>
-      <h4>함수형 컴포넌트의 수명주기</h4>      
-      <div style={boxStyle}>{leftCount}</div>    
-      <input type='button' value="좌측이동" onClick={moveLeft} />
-      <input type='button' value="우측이동" onClick={moveRight} />
-    </div>
-  );
+  return (<div>
+    <h4>함수형 컴포넌트의 수명주기</h4>      
+    <div style={boxStyle}>{leftCount}</div>    
+    <input type='button' value="좌측이동" onClick={moveLeft} />
+    <input type='button' value="우측이동" onClick={moveRight} />
+  </div>);
 }
 
 function LifeCycle() {
@@ -49,3 +47,6 @@ function LifeCycle() {
 }
 
 export default LifeCycle;
+
+
+

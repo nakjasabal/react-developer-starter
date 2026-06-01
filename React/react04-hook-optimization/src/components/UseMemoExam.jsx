@@ -24,12 +24,14 @@ const UseMemoExam = () => {
 
   return (<>
     <h2>useMemo 사용하기</h2>
-    <input type="number" value={number} placeholder="소수 판단할 숫자 입력"
+    <input type="number" value={number} 
+      placeholder="소수 판단할 숫자 입력"
       onChange={(e) => setNumber(parseInt(e.target.value))}
     />
     <p>정수 {number} 는 {checkPrime ? '소수 O' : '소수 X'}</p>
 
-    <input type="text" value={text} placeholder="이름 입력(소수 판단과 무관)"
+    <input type="text" value={text} 
+      placeholder="이름 입력(소수 판단과 무관)"
       onChange={(e) => setText(e.target.value)}
     />
     <p>입력한 이름: {text}</p>
@@ -37,3 +39,4 @@ const UseMemoExam = () => {
 };
 
 export default UseMemoExam;
+

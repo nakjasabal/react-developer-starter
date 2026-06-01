@@ -1,3 +1,5 @@
+import React from 'react';
+
 function ArticleView(props){
   return (
     <article>
@@ -25,10 +27,12 @@ function ArticleView(props){
           <tr>
             <th>내용2</th>
             <td>{
-              props.selectRow.contents.split('\n').map((currVal)=>{
-                return (<>
-                  {currVal} <br key={Math.random()} />
-                </>);
+              props.selectRow.contents.split('\n').map((currVal, index)=>{
+                return (
+                  <React.Fragment key={index}>
+                    {currVal} <br />
+                  </React.Fragment>
+                );
               })						
             }</td>
           </tr>

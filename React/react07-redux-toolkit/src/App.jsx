@@ -13,14 +13,24 @@ function App() {
   return (<>
     <TopNavi></TopNavi>
     <Routes> 
-      <Route path='/' element={<BasicProvider store={basicStore}>
-                        <ReduxBasicApp /></BasicProvider>} />
-      <Route path='/ReduxBasicApp' element={<BasicProvider store={basicStore}>
-                                      <ReduxBasicApp /></BasicProvider>} />
-      <Route path='/TodoApp' element={<TodoProvider store={todoStore}>
-                                <TodoApp /></TodoProvider>} />
+      <Route path='/' element={
+        <BasicProvider store={basicStore}>
+          <ReduxBasicApp />
+        </BasicProvider>
+      } />
+      <Route path='/ReduxBasicApp' element={
+        <BasicProvider store={basicStore}>
+          <ReduxBasicApp />
+        </BasicProvider>
+      } />
+      <Route path='/TodoApp' element={
+        <TodoProvider store={todoStore}>
+          <TodoApp />
+        </TodoProvider>
+      } />
     </Routes>
   </>)
 }
 
 export default App;
+

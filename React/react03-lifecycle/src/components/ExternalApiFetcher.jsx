@@ -17,13 +17,15 @@ function RandomUser(props){
   let trTag = myJSON.results.map((data) => {
     return (
       <tr key={data.login.md5}>
-        <td><img src={data.picture.thumbnail} alt={data.login.username} /></td>
+        <td><img src={data.picture.thumbnail} 
+                      alt={data.login.username} /></td>
         <td><a href='/' onClick={(e)=>{
             e.preventDefault();
             props.onProfile(data);
           }}>{data.login.username}</a>
         </td>
-        <td>{data.name.title} {data.name.first} {data.name.last}</td>
+        <td>{data.name.title} {data.name.first} 
+                                    {data.name.last}</td>
         <td>{data.nat}</td>
         <td>{data.email}</td>
       </tr>
@@ -60,3 +62,4 @@ password:${sData.login.password}`;
 }
 
 export default ExternalApiFetcher;
+
